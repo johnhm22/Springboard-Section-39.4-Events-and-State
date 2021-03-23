@@ -1,0 +1,13 @@
+.EightBall {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.EightBall-question{
+    color: white;
+    text-align: center;
+    text-justify: auto;
+    font-size: 30px;
+}
+
