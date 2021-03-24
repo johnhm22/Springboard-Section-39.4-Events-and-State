@@ -7,9 +7,10 @@ const EightBall = ({answers}) => {
 
     const genIdx = () => Math.floor(Math.random() * answers.length);
 
-    const [idx, setIdx] = useState(genIdx());
+    const [idx, setIdx] = useState(0);
     let myColor = answers[idx].color;
     let myMsg = answers[idx].msg;
+
 
     return (
         <div className="EightBall" style={{backgroundColor: myColor}}
