@@ -1,11 +1,16 @@
 import React, {useState} from 'react';
-// import answers from './answers';
 import './EightBall.css';
 
 
 const EightBall = ({answers}) => {
 
-    const genIdx = () => Math.floor(Math.random() * answers.length);
+    function genIdx(){
+        let idx = 0;
+        while (idx === 0) {
+           idx = Math.floor(Math.random() * answers.length)
+            }
+        return idx;    
+        }
 
     const [idx, setIdx] = useState(0);
     let myColor = answers[idx].color;
@@ -16,9 +21,6 @@ const EightBall = ({answers}) => {
         <div className="EightBall" style={{backgroundColor: myColor}}
         onClick={() => setIdx(genIdx)}
         >
-            <br></br>
-            <br></br>
-            <br></br>
             <h1 className='EightBall-question'>{myMsg}</h1>
         </div>
     )
